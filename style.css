@@ -1,0 +1,215 @@
+@charset "UTF8";
+@font-face {
+      font-family: 'Bebas';
+      src: url(fontes/BebasNeue.ttf) format('opentype');
+      font-weight: normal;
+      font-style: normal;
+}
+@font-face {
+      font-family: 'Android';
+      src: url(fontes/idroid.otf) format('opentype');
+      font-weight: normal;
+      font-style: normal;
+}
+
+:root { /* "Serve também para declarar variáveis*/
+      --cor0: #C5EBD6;
+      --cor1: #83E1AD;
+      --cor2: #3DDC84;
+      --cor3: #2FA866;
+      --cor4: #1A5C37;
+      --cor5: #063D1E;
+
+      --fontePadrao: Arial, Verdana, Helvetica, sans-serif;
+      --fonteDestaque: 'Bebas', cursive;
+      --fonteAndroid: 'Android', cursive;
+}
+
+* { /* Configuração para todos os elementos(Globais)*/ 
+      margin: 0px;
+      padding: 0px;
+}
+
+body {
+      background-color: var(--cor0);
+      font-family: var(--fontePadrao);
+}
+
+a.externo::after {
+      content: '\00A0\1F517';
+}
+
+header {
+      background-image: linear-gradient(to bottom, var(--cor2), var(--cor4));
+      min-height: 150px;
+      text-align: center;
+      color: white;
+      padding-top: 30px;
+}
+
+header h1 {
+      font-family: var(--fonteDestaque);
+      font-size: 3em;
+      font-weight: normal;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 0px rgb(46, 44, 44);
+}
+
+header p {
+      font-family: var(--fontePadrao);
+      font-size: 1.2em;
+      width: 500px;
+      margin: auto;
+      padding-left: 10px; /* Nâo ficar grudado à tela*/
+      padding-right: 10px; /* Nâo ficar grudado à tela*/
+      text-shadow: 2px 2px 0px rgb(46, 44, 44);
+}
+
+nav {
+      background-color: var(--cor4);
+      padding: 10px;
+      text-shadow: 0px 7px 7px rgb(65, 64, 64);
+}
+
+nav a {
+      padding: 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      color: white;
+      transition-duration: 0.5s; /* Efeito Fade*/
+}
+
+nav a:hover {
+      background-color: var(--cor3);
+      color: var(--cor5);
+}
+
+main {
+      min-width: 300px; /* Responsividade do conteúdo*/ 
+      max-width: 1000px;
+      margin: auto; /* Manter conteúdo 'centralizado'*/
+      margin-bottom: 20px;
+      padding: 20px;  
+      background-color: white;
+      box-shadow: 0px 0px 10px rgb(44, 43, 43);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+}
+
+main h1 {
+      color: var(--cor4);
+      font-family: var(--fonteAndroid);
+      font-size: 1.8em;
+}
+
+main h2 {
+      color: var(--cor4);
+      font-family: var(--fonteAndroid);
+      font-size: 1.3em;
+      font-weight: normal;
+      background-image: linear-gradient(to right, var(--cor1,), transparent);
+      text-indent: 8px;
+}
+
+main p {
+      margin: 15px 0px;
+      text-align: justify;
+      text-indent: 30px;
+      font-size: 1em;
+      line-height: 1.5em;
+}
+
+main strong {
+      color: var(--cor4);
+      font-weight: bold;
+}
+
+main a {
+      color: var(--cor5);
+      font-weight: bold;
+      text-decoration: none;
+      background-color: var(--cor1);
+      border-radius: 4px;
+      padding: 2px 6px;
+}
+
+main a:hover {
+      text-decoration: underline;
+      color: rgb(250, 95, 6);
+}
+
+main img {
+      width: 100%; /* Responsividade da imagem*/
+} 
+
+main img.pequena {
+      max-width: 350PX;
+      display: block;
+      margin: auto;
+}
+
+/* Ajustes para tornar o video responsivel*/
+div.video {
+      margin: 0px -20px 30px -20px;
+      padding: 20px;
+      padding-bottom: 57%;
+      position: relative;
+}
+
+div.video iframe{
+      position: absolute;
+      top: 2%;
+      left: 2%;
+      width: 95%;
+      height: 94%;
+
+}
+/* Fim dos Ajustes para tornar...*/
+
+aside {
+      background-color: var(--cor1);
+      padding: 10px;
+      border-radius: 7px;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.322);
+}
+
+aside > h3 {
+      background-color: var(--cor4);
+      color: white;
+      padding: 7px;
+      margin: -10px -10px 0px -10px;
+      border-radius: 10px 10px 0px 0px;
+}
+
+aside ul {
+      list-style-type: '\2714\00A0\00A0'; /* Símbolo de check - nem todo navegador é compatível + espaço em código*/
+      list-style-position: inside;
+      columns: 2;
+}
+
+aside a {
+      background-color: rgba(0, 0, 0, 0.160);
+      color: black;
+}
+
+aside strong {
+      color: black;
+}
+
+aside abbr {
+      text-decoration: underline;
+}
+
+aside abbr:hover {
+      color: rgb(250, 95, 6);
+      font-weight: bold;
+}
+
+footer {
+      background-color: var(--cor5);
+      color: white;
+      text-align: center;
+      font-size: 0.8em;
+      padding: 3px;     
+}
