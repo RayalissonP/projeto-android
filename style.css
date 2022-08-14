@@ -66,9 +66,10 @@ header p {
 }
 
 nav {
-      background-color: var(--cor4);
+      background-color: #222831;
       padding: 10px;
       text-shadow: 0px 7px 7px rgb(65, 64, 64);
+      text-align: center;
 }
 
 nav a {
